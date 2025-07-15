@@ -1,1 +1,220 @@
-#index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SOL – Voice-First AI Assistant</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Google Fonts: Inter and Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* Custom styles for animations and 3D effect */
+    body {
+      background: linear-gradient(135deg, #e0e7ff, #f5f6fa);
+    }
+
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(8px);
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .hero-animation {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .feature-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px) !important; 
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .cta-button {
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .cta-button:hover {
+      transform: scale(1.05);
+      background: #2563eb;
+    }
+
+    .feature-table tr {
+      transition: background 0.2s ease;
+    }
+
+    .feature-table tr:hover {
+      background: rgba(59, 130, 246, 0.1);
+    }
+
+    /* 3D hero effect inspired by Spline.design */
+    .hero-container {
+      perspective: 1000px;
+    }
+
+    .hero-image {
+      transform: rotateX(5deg) rotateY(5deg);
+      transition: transform 0.5s ease;
+    }
+
+    .hero-image:hover {
+      transform: rotateX(0deg) rotateY(0deg);
+    }
+    
+    @media (max-width: 640px) {
+    .hero-image {
+    max-width: 100%;
+  }
+}
+  </style>
+</head>
+<body class="font-inter text-gray-800">
+  <header class="sticky-header py-4 shadow-lg">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <h1 class="text-3xl font-poppins font-bold text-indigo-600">
+        <i class="fas fa-microphone-alt mr-2"></i>SOL
+      </h1>
+      <nav>
+        <a href="#features" class="text-gray-600 hover:text-indigo-600 mx-4">Features</a>
+        <a href="#testimonials" class="text-gray-600 hover:text-indigo-600 mx-4">Testimonials</a>
+        <a href="#start" class="text-gray-600 hover:text-indigo-600 mx-4">Get Started</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-container py-16 text-center">
+    <div class="container mx-auto px-4">
+      <h1 class="text-5xl md:text-6xl font-poppins font-extrabold text-gray-900 mb-4">
+        <i class="fas fa-microphone mr-2"></i>Meet SOL
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 mb-8">Your Voice-First AI Assistant for Real Life</p>
+      <img src="Idlemonk/SOL_TEXH_BLOG/images/agentic-ai.jpg" alt="SOL AI Assistant" class="hero-image max-w-full h-auto rounded-2xl mx-auto hero-animation shadow-xl" style="max-width: 600px;" />
+      <a href="#start" class="cta-button inline-block px-8 py-4 bg-indigo-600 text-white font-poppins font-semibold rounded-lg mt-8">
+        <i class="fas fa-rocket mr-2"></i>Start Talking Now
+      </a>
+    </div>
+  </section>
+
+  <section id="features" class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-poppins font-bold text-gray-900 text-center mb-12">
+        <i class="fas fa-brain mr-2"></i>Built to Think. Designed to Care.
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="feature-card bg-white p-6 rounded-xl shadow-lg">
+          <i class="fas fa-birthday-cake text-indigo-600 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Smart Memory</h3>
+          <p>Remembers important dates like your birthday or anniversaries.</p>
+        </div>
+        <div class="feature-card bg-white p-6 rounded-xl shadow-lg">
+          <i class="fas fa-bullseye text-indigo-600 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Goal Tracking</h3>
+          <p>Tracks your personal and professional goals with ease.</p>
+        </div>
+        <div class="feature-card bg-white p-6 rounded-xl shadow-lg">
+          <i class="fas fa-rocket text-indigo-600 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Proactive Suggestions</h3>
+          <p>Suggests next steps before you even ask.</p>
+        </div>
+        <div class="feature-card bg-white p-6 rounded-xl shadow-lg">
+          <i class="fas fa-envelope text-indigo-600 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Email Integration</h3>
+          <p>Sends reminders and updates on your behalf.</p>
+        </div>
+        <div class="feature-card bg-white p-6 rounded-xl shadow-lg">
+          <i class="fas fa-calendar-alt text-indigo-600 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Calendar Management</h3>
+          <p>Keeps your schedule organized and up-to-date.</p>
+        </div>
+        <div class="feature-card bg-white p-6 rounded-xl shadow-lg">
+          <i class="fas fa-globe text-indigo-600 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Multilingual Support</h3>
+          <p>Understands and responds in your native language.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-indigo-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-poppins font-bold text-gray-900 text-center mb-12">
+        <i class="fas fa-volume-up mr-2"></i>Why Voice-First?
+      </h2>
+      <p class="text-lg md:text-xl text-gray-600 text-center max-w-3xl mx-auto">
+        Typing slows you down. SOL listens. Whether you’re cooking, walking, or working — just speak. <strong>Say it. SOL handles the rest.</strong>
+      </p>
+    </div>
+  </section>
+
+  <section id="testimonials" class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-poppins font-bold text-gray-900 text-center mb-12">
+        <i class="fas fa-quote-left mr-2"></i>What People Are Saying
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <blockquote class="bg-white p-6 rounded-xl shadow-lg">
+          <p class="text-gray-600 italic">“SOL reminds me about my meetings and my mom’s birthday — I’ve never had an assistant do that before.”</p>
+          <p class="mt-4 font-semibold text-indigo-600">— Lea M., Berlin, Germany</p>
+        </blockquote>
+        <blockquote class="bg-white p-6 rounded-xl shadow-lg">
+          <p class="text-gray-600 italic">“It’s like having a thinking friend who listens and plans with me. I literally talk out my project ideas to it.”</p>
+          <p class="mt-4 font-semibold text-indigo-600">— Aarav K., Bangalore, India</p>
+        </blockquote>
+        <blockquote class="bg-white p-6 rounded-xl shadow-lg">
+          <p class="text-gray-600 italic">“I no longer stress over deadlines. SOL speaks my schedule every morning and keeps me focused.”</p>
+          <p class="mt-4 font-semibold text-indigo-600">— Jin P., Manila, Philippines</p>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-poppins font-bold text-gray-900 text-center mb-12">
+        <i class="fas fa-lock mr-2"></i>Your World. Your Rules.
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="feature-card bg-white p-6 rounded-xl shadow-lg text-center">
+          <i class="fas fa-cog text-indigo-600 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Control Your Data</h3>
+          <p>Choose what SOL remembers about you.</p>
+        </div>
+        <div class="feature-card bg-white p-6 rounded-xl shadow-lg text-center">
+          <i class="fas fa-trash-alt text-indigo-600 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Delete Anytime</h3>
+          <p>Remove any conversation, task, or note instantly.</p>
+        </div>
+        <div class="feature-card bg-white p-6 rounded-xl shadow-lg text-center">
+          <i class="fas fa-shield-alt text-indigo-600 text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Total Privacy</h3>
+          <p>Full transparency with your data and interactions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="start" class="py-16 bg-indigo-600 text-white text-center">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-poppins font-bold mb-4">
+        <i class="fas fa-rocket mr-2"></i>Ready to Start Talking?
+      </h2>
+      <p class="text-lg md:text-xl mb-8">Speak. Plan. Succeed. Let SOL be your companion in productivity and organization.</p>
+      <a href="#" class="cta-button inline-block px-8 py-4 bg-white text-indigo-600 font-poppins font-semibold rounded-lg">
+        <i class="fas fa-microphone-alt mr-2"></i>Start Now
+      </a>
+    </div>
+  </footer>
+</body>
+</html>
